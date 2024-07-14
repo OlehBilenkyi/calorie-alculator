@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Калькулятор Калорий</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="calorie-calculator">
+        <h1>Калькулятор Калорий</h1>
+        <form id="calorie-form">
+            <div class="form-group">
+                <label for="age">Возраст (лет):</label>
+                <input type="number" id="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Пол:</label>
+                <select id="gender" required>
+                    <option value="male">Мужчина</option>
+                    <option value="female">Женщина</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="weight">Вес (кг):</label>
+                <input type="number" id="weight" required>
+            </div>
+            <div class="form-group">
+                <label for="height">Рост (см):</label>
+                <input type="number" id="height" required>
+            </div>
+            <div class="form-group">
+                <label for="activity">Уровень активности:</label>
+                <select id="activity" required>
+                    <option value="1.2">Минимальный</option>
+                    <option value="1.375">Легкая активность</option>
+                    <option value="1.55">Умеренная активность</option>
+                    <option value="1.725">Высокая активность</option>
+                    <option value="1.9">Очень высокая активность</option>
+                </select>
+            </div>
+            <button type="submit">Рассчитать</button>
+        </form>
+        <div id="result">
+            <h2>Ваши результаты:</h2>
+            <p>Базовый уровень метаболизма (BMR): <span id="bmr"></span> ккал/день</p>
+            <p>Необходимое количество калорий: <span id="calories"></span> ккал/день</p>
+            <h3>Распределение макроэлементов:</h3>
+            <p>Белки: <span id="protein"></span> г/день</p>
+            <p>Жиры: <span id="fat"></span> г/день</p>
+            <p>Углеводы: <span id="carbs"></span> г/день</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
